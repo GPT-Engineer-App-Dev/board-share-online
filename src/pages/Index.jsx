@@ -25,10 +25,10 @@ const Index = () => {
       {isError && <Text>Error: {error.message}</Text>}
 
       <VStack spacing={4} align="stretch">
-        {posts.length === 0 ? (
+        {posts?.length === 0 ? (
           <Text>No posts yet. Be the first to post!</Text>
         ) : (
-          posts && posts.map((post) => (
+          posts?.map((post) => (
             <Box key={post.id} p={4} shadow="md" borderWidth="1px" borderRadius="md">
               <Text>{post.title}</Text>
               <Text>{post.body}</Text>
